@@ -19,3 +19,8 @@ int main()
         printf("\n");
     }
 }
+
+OUTPUT :
+
+10	10	10	
+10	10	10
