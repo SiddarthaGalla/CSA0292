@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+// Define a structure to hold the result
+struct Time {
+    int weeks;
+    int days;
+};
+
+// Function to convert days to weeks and days
+struct Time convertDays(int totalDays) {
+    struct Time result;
+    
+    result.weeks = totalDays / 7;  // Integer division to get weeks
+    result.days = totalDays % 7;   // Remainder to get remaining days
+    
+    return result;
+}
+
+int main() {
+    int totalDays;
+    struct Time convertedTime;
+    
+    // Get input from user
+    printf("Enter the total number of days: ");
+    scanf("%d", &totalDays);
+    
+    // Check for negative input
+    if (totalDays < 0) {
+        printf("Please enter a non-negative number of days.\n");
+        return 1;
+    }
+    
+    // Convert days to weeks and days
+    convertedTime = convertDays(totalDays);
+    
+    // Display the result
+    printf("%d days = %d weeks and %d days\n", 
+           totalDays, convertedTime.weeks, convertedTime.days);
+    
+    return 0;
+}
+
+OUTPUT  :
+Enter the total number of days: 600
+600 days = 85 weeks and 5 days
