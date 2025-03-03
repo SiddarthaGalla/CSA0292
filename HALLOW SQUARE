@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+    int size,i,j;
+    printf("Enter the size of square:");
+    scanf("%d",&size);
+
+    if (size < 0 || size > 10){
+        printf("the  size should be between 0 and 10");
+        return 0;
+    }
+
+for (i=0;i<size;i++){
+    for(j=0;j<size;j++){
+        if(i==0 || i==size-1){
+            printf("#");
+        }
+        else if(j==0 || j==size-1){
+            printf("#");
+        }
+        else {
+            printf(" ");
+        }
+    
+    }
+    printf("\n");
+}
+}
+
+
+
+OUTPUT  :
+
+Enter the size of square:5
+#####
+#   #
+#   #
+#   #
+#####
